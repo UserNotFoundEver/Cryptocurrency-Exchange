@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Formlessness</title>
+  </head>
+  <body>
+    <h3>xchange</h3>
+    <form action="processing" method="POST">
+      {% csrf_token %}
+      <input type="text" name="input" placeholder="You have:"><br>
+        <select>
+          {% for currency in currencies %}
+          <option>{{currency}}</option>
+          {% endfor %}
+        </select>
+        <br>
+      <input type="text" name="output" placeholder="You get:"><br>
+        <select>
+          {% for currency in currencies %}
+          <option>{{currency}}</option>
+          {% endfor %}
+        </select><br>
+        <button>GIT IT!</button>
+    </form>
+  </body>
+</html>
