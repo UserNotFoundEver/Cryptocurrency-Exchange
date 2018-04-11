@@ -1,13 +1,15 @@
 <html>
 <head>
     <title>Formlessness</title>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-<h3>xchange</h3>
+<h3>Select which assets to trade in 3 steps</h3>
 <!-- Begin form and input 1 -->
 <form action="processing" method="POST">
     {% csrf_token %}
-    <input type="text" name="input" placeholder="You have:"><br>
+    <input type="text" name="input" placeholder="You have:">
     <!-- lists available currencies from API call -->
     <select>
         {% for currency in currencies %}
@@ -16,13 +18,45 @@
     </select>
     <br>
     <!-- input 2 with API call relative to input 1 -->
-    <input type="text" name="output" placeholder="You get:"><br>
+    <input type="text" name="output" placeholder="You get:">
     <select>
         {% for currency in currencies %}
-        <option>{{currency}}</option>
+        <option {% if currency == "eth" %}selected="eth"{% endif %}>{{currency}}</option>
         {% endfor %}
     </select><br>
-    <button>GIT IT!</button>
+    <button>Continue</button>
+        {{min_amounts}}
 </form>
+    <!-- getMinAmount -->
+    {{min_amounts}}
+
+<!--<script>-->
+    <!--function http_post(url, data, success) {-->
+        <!--let csrf_token = Cookies.get('csrftoken');-->
+        <!--let xhttp = new XMLHttpRequest();-->
+        <!--xhttp.onreadystatechange = function() {-->
+            <!--if (this.readyState === 4 && this.status === 200) {-->
+                <!--success(xhttp.responseText);-->
+            <!--}-->
+        <!--};-->
+        <!--xhttp.open("POST", url);-->
+        <!--xhttp.setRequestHeader("Content-Type", "application/json");-->
+        <!--xhttp.setRequestHeader('X-CSRFToken', csrf_token);-->
+        <!--xhttp.send(JSON.stringify(data));-->
+    <!--}-->
+    <!--function http_get(url, success) {-->
+        <!--let xhttp = new XMLHttpRequest();-->
+        <!--xhttp.onreadystatechange = function() {-->
+            <!--if (this.readyState === 4 && this.status === 200) {-->
+                <!--let data = JSON.parse(xhttp.responseText);-->
+                <!--success(data);-->
+            <!--}-->
+        <!--};-->
+        <!--xhttp.open("GET", url);-->
+        <!--xhttp.send();-->
+    <!--}-->
+<!--</script>-->
+
+
 </body>
 </html>
