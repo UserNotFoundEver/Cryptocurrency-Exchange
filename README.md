@@ -1,5 +1,5 @@
-# formlessness
+# formlessness crypto exchange
 api formless ness, incomplete, infinite design.
 
-# cryptocurrency exchange
+# to do
 Currently an early work in progress.
