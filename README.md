@@ -11,6 +11,4 @@ It is currently an early work in progress. All it does it getCoins, which lists 
 Python, JavaScript/Ajax, and Django (and obviously HTML/CSS).
 
 # support
-You can get an API key by signing up with my affiliate link. I'll get a tiny percentage of a transaction for every time you try Changelly, even if it's for testing purposes to decide if you like the service/API. https://changelly.com/?ref_id=32fb1c808f3c
-
-You can also purchase Cryptocurrency on Coinbase https://www.coinbase.com/join/5961d3bad26ede011ecc6fa7 . It's possible to buy Bitcoin, and use the app to scan the QR code and receive Ethereum for example, since the App supports Bitcoin, Ethereum, Bitcoin Cash, and Litecoin wallets. However, you can use any wallet you want.
+You can get an API key on changelly, ahotuhg there is so much tech in 2024 that I would advice to DYOR. This exchange isn't a finished product. Proceed with caution and make sure you know what you are doing. 100000% this python code needs to be updated etc.
